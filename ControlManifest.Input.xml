@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="ContactCenterTools" constructor="FollowUpHub" version="1.0.0" display-name-key="Follow-up Hub" description-key="Multi-customer notes and follow-up reminders stored in Dataverse" control-type="standard">
+    <external-service-usage enabled="false" />
+    <property name="tableName" display-name-key="Dataverse table logical name" description-key="Example: cct_contactcenterfollowup" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="customerColumn" display-name-key="Customer name column" description-key="Example: cct_customername" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="notesColumn" display-name-key="Notes column" description-key="Example: cct_notes" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="followUpAtColumn" display-name-key="Follow-up date column" description-key="Example: cct_followupat" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="statusColumn" display-name-key="Status column" description-key="Example: cct_status" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="priorityColumn" display-name-key="Priority column" description-key="Example: cct_priority" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="pendingStatusValue" display-name-key="Pending status numeric value" description-key="Choice numeric value for Pending" of-type="Whole.None" usage="input" required="true" />
+    <property name="completedStatusValue" display-name-key="Completed status numeric value" description-key="Choice numeric value for Completed" of-type="Whole.None" usage="input" required="true" />
+    <property name="normalPriorityValue" display-name-key="Normal priority numeric value" description-key="Choice numeric value for Normal" of-type="Whole.None" usage="input" required="false" />
+    <property name="highPriorityValue" display-name-key="High priority numeric value" description-key="Choice numeric value for High" of-type="Whole.None" usage="input" required="false" />
+    <resources><code path="index.ts" order="1" /><css path="css/FollowUpHub.css" order="1" /></resources>
+    <feature-usage><uses-feature name="WebAPI" required="true" /></feature-usage>
+  </control>
+</manifest>
